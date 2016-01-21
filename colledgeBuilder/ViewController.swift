@@ -14,12 +14,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
     
-    var colleges = ["UOI", "NIU", "CLC"];
+    var colleges : [College] = [];
     
     override func viewDidLoad()
     {
         super.viewDidLoad();
         editButton.tag = 0;
+        colleges.append(College(name: "ITT", state: "Illinois", population: 46594, image: UIImage(named: "Chicago")!))
+        colleges.append(College(name: "NIU", state: "Illinois", population: 749473, image: UIImage(named: "Chicago")!))
+        colleges.append(College(name: "CLC", state: "Illinois", population: 74738738, image: UIImage(named: "Chicago")!))
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -30,7 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath);
-        cell.textLabel?.text = colleges[indexPath.row];
+        cell.textLabel?.text = colleges[indexPath.row].name;
         return cell;
     }
     
@@ -60,7 +63,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             {
                 (action) -> Void in
                 let collegeTextField = alert.textFields![0] as UITextField;
-                self.colleges.append(collegeTextField.text!);
+                self.colleges.append(College(name: collegeTextField.text!))
                 self.tableView.reloadData();
             }
         alert.addAction(addAction);
