@@ -12,12 +12,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     
     var colleges = ["UOI", "NIU", "CLC"];
     
     override func viewDidLoad()
     {
         super.viewDidLoad();
+        editButton.tag = 0;
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -64,7 +66,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         alert.addAction(addAction);
         self.presentViewController(alert, animated: true, completion: nil);
     }
-        
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        let college = colleges[sourceIndexPath.row]
+        colleges.removeAtIndex(sourceIndexPath.row)
+        colleges.insert(college, atIndex: destinationIndexPath.row)
+    }
+    
+    @IBAction func onTappedEdit(sender: UIBarButtonItem)
+    {
+        if sender.tag == 0
+        {
+            tableView.editing = true
+            sender.tag = 1
+        }
+        else
+        {
+            tableView.editing = false
+            sender.tag = 0
+        }
+    }
+    
 }
     
 
