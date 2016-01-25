@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5E782A1C569DD800CED22A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E78291C569DD800CED22A /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F697BB31C4FFF0800691C0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F697BB21C4FFF0800691C0A /* AppDelegate.swift */; };
 		3F697BB51C4FFF0800691C0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F697BB41C4FFF0800691C0A /* ViewController.swift */; };
 		3F697BB81C4FFF0800691C0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F697BB61C4FFF0800691C0A /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F5E78291C569DD800CED22A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3F697BAF1C4FFF0800691C0A /* colledgeBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colledgeBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F697BB21C4FFF0800691C0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F697BB41C4FFF0800691C0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3F697BB21C4FFF0800691C0A /* AppDelegate.swift */,
 				3F697BB41C4FFF0800691C0A /* ViewController.swift */,
 				3F697BB61C4FFF0800691C0A /* Main.storyboard */,
+				3F5E78291C569DD800CED22A /* DetailViewController.swift */,
 				3FCC5D891C515AD9005F2653 /* College.swift */,
 				3F697BB91C4FFF0800691C0A /* Assets.xcassets */,
 				3F697BBB1C4FFF0800691C0A /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				3F697BB51C4FFF0800691C0A /* ViewController.swift in Sources */,
 				3F697BB31C4FFF0800691C0A /* AppDelegate.swift in Sources */,
 				3FCC5D8A1C515AD9005F2653 /* College.swift in Sources */,
+				3F5E782A1C569DD800CED22A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
