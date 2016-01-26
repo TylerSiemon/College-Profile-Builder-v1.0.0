@@ -45,7 +45,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
-        if editingStyle == .Delete {
+        if editingStyle == .Delete
+        {
             colleges.removeAtIndex(indexPath.row);
             tableView.reloadData();
         }
@@ -72,6 +73,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.colleges.append(College(name: collegeTextField.text!))
                 self.tableView.reloadData();
             }
+        
         alert.addAction(addAction);
         self.presentViewController(alert, animated: true, completion: nil);
     }
@@ -81,7 +83,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return true
     }
     
-    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+    {
         let college = colleges[sourceIndexPath.row]
         colleges.removeAtIndex(sourceIndexPath.row)
         colleges.insert(college, atIndex: destinationIndexPath.row)

@@ -31,5 +31,9 @@ class DetailViewController: UIViewController
         college.name = collegeTextField.text!;
         college.state = stateTextField.text!;
         college.population = Int(populationTextField.text!)!;
+        
+        collegeTextField.resignFirstResponder();
+        stateTextField .resignFirstResponder();
+        populationTextField.resignFirstResponder();
     }
 }
