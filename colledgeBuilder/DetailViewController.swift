@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class DetailViewController: UIViewController, SFSafariViewControllerDelegate
+class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
     @IBOutlet weak var collegeTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
@@ -18,10 +18,12 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate
     @IBOutlet weak var webPageTextField: UITextField!
     
     var college : College!;
+    let imagePicker = UIImagePickerController();
     
     override func viewDidLoad()
     {
         super.viewDidLoad();
+        imagePicker.delegate = self;
         collegeTextField.text = college.name;
         stateTextField.text = college.state;
         populationTextField.text = String(college.population);
@@ -35,6 +37,7 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate
         college.state = stateTextField.text!;
         college.population = Int(populationTextField.text!)!;
         college.webPage = webPageTextField.text!;
+        college.image = imageView.image;
         
         collegeTextField.resignFirstResponder();
         stateTextField .resignFirstResponder();
@@ -49,8 +52,27 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate
         self.presentViewController(svc, animated: true, completion: nil);
     }
     
+    @IBAction func onTappedCameraButton(sender: AnyObject)
+    {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+        presentViewController(imagePicker, animated: true, completion: nil);
+    }
+    
     func safariViewControllerDidFinish(controller: SFSafariViewController)
     {
         controller.dismissViewControllerAnimated(true, completion: nil);
     }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
+    {
+        imagePicker.dismissViewControllerAnimated(true)
+            {
+                () -> Void in
+                let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage;
+                self.imageView.image = selectedImage;
+        }
+    }
+    
+    
+    
 }

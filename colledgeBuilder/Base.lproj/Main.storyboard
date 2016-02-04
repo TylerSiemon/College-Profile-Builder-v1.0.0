@@ -124,6 +124,14 @@
                                     <action selector="onTappedSaveButton:" destination="kYs-Nv-Nlg" eventType="touchUpInside" id="dep-0B-uTE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky4-T1-CDA">
+                                <rect key="frame" x="277" y="472" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Image"/>
+                                <connections>
+                                    <action selector="onTappedCameraButton:" destination="kYs-Nv-Nlg" eventType="touchUpInside" id="LPj-G3-7M6"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGc-Gx-qtw">
                                 <rect key="frame" x="451" y="238" width="46" height="30"/>
                                 <animations/>
