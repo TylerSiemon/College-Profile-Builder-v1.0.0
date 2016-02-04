@@ -102,14 +102,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA6-qd-ykZ">
-                                <rect key="frame" x="283" y="238" width="34" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="onTappedSaveButton:" destination="kYs-Nv-Nlg" eventType="touchUpInside" id="dep-0B-uTE"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="823-hz-mDW">
                                 <rect key="frame" x="175" y="276" width="250" height="150"/>
                                 <animations/>
@@ -118,6 +110,28 @@
                                     <constraint firstAttribute="width" constant="250" id="y7B-ef-tSj"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3lU-nN-POd">
+                                <rect key="frame" x="225" y="238" width="150" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA6-qd-ykZ">
+                                <rect key="frame" x="283" y="434" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTappedSaveButton:" destination="kYs-Nv-Nlg" eventType="touchUpInside" id="dep-0B-uTE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGc-Gx-qtw">
+                                <rect key="frame" x="451" y="238" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Go!"/>
+                                <connections>
+                                    <action selector="goToWebsiteButton:" destination="kYs-Nv-Nlg" eventType="touchUpInside" id="vai-tM-dIb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -125,8 +139,10 @@
                             <constraint firstItem="MA6-qd-ykZ" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="0xg-un-tDI"/>
                             <constraint firstItem="nPs-Bs-l0y" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="78o-Vm-qCv"/>
                             <constraint firstItem="823-hz-mDW" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="Xgw-yq-ynK"/>
+                            <constraint firstItem="yGc-Gx-qtw" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" constant="174" id="ZKa-eb-jT2"/>
                             <constraint firstItem="dg6-Cb-JIo" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="tF0-zF-rJ2"/>
                             <constraint firstItem="QIu-Dn-tn8" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="ts0-Dy-TQC"/>
+                            <constraint firstItem="3lU-nN-POd" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="wQV-8C-HoF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -134,6 +150,7 @@
                         <outlet property="imageView" destination="823-hz-mDW" id="ypv-AJ-fNg"/>
                         <outlet property="populationTextField" destination="QIu-Dn-tn8" id="HZb-rK-Txy"/>
                         <outlet property="stateTextField" destination="nPs-Bs-l0y" id="G11-Tt-JwG"/>
+                        <outlet property="webPageTextField" destination="3lU-nN-POd" id="mXj-Pe-rJK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8j0-9F-ouo" userLabel="First Responder" sceneMemberID="firstResponder"/>
