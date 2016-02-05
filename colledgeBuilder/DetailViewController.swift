@@ -73,6 +73,14 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
         }
     }
     
+    @IBAction func onTapScreen(sender: UITapGestureRecognizer)
+    {
+        collegeTextField.resignFirstResponder();
+        stateTextField .resignFirstResponder();
+        populationTextField.resignFirstResponder();
+        webPageTextField.resignFirstResponder();
+        
+    }
     
     
 }

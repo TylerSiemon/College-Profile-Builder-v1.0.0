@@ -87,19 +87,19 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-Cb-JIo">
                                 <rect key="frame" x="225" y="124" width="150" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPs-Bs-l0y">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPs-Bs-l0y">
                                 <rect key="frame" x="225" y="162" width="150" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="population" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIu-Dn-tn8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Population" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIu-Dn-tn8">
                                 <rect key="frame" x="225" y="200" width="150" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="823-hz-mDW">
@@ -113,29 +113,32 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3lU-nN-POd">
                                 <rect key="frame" x="225" y="238" width="150" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA6-qd-ykZ">
-                                <rect key="frame" x="283" y="434" width="34" height="30"/>
+                                <rect key="frame" x="275" y="510" width="51" height="30"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="onTappedSaveButton:" destination="kYs-Nv-Nlg" eventType="touchUpInside" id="dep-0B-uTE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky4-T1-CDA">
-                                <rect key="frame" x="277" y="472" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky4-T1-CDA">
+                                <rect key="frame" x="231" y="472" width="139" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Image"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Choose Image"/>
                                 <connections>
                                     <action selector="onTappedCameraButton:" destination="kYs-Nv-Nlg" eventType="touchUpInside" id="LPj-G3-7M6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGc-Gx-qtw">
-                                <rect key="frame" x="451" y="238" width="46" height="30"/>
+                                <rect key="frame" x="231" y="434" width="139" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Go!"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Go To Website"/>
                                 <connections>
                                     <action selector="goToWebsiteButton:" destination="kYs-Nv-Nlg" eventType="touchUpInside" id="vai-tM-dIb"/>
                                 </connections>
@@ -143,15 +146,20 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="MA6-qd-ykZ" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="0xg-un-tDI"/>
                             <constraint firstItem="nPs-Bs-l0y" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="78o-Vm-qCv"/>
+                            <constraint firstItem="yGc-Gx-qtw" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="ANx-rh-w1k"/>
+                            <constraint firstItem="ky4-T1-CDA" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="V6D-b9-wub"/>
                             <constraint firstItem="823-hz-mDW" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="Xgw-yq-ynK"/>
-                            <constraint firstItem="yGc-Gx-qtw" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" constant="174" id="ZKa-eb-jT2"/>
+                            <constraint firstItem="MA6-qd-ykZ" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="h5R-E0-XH9"/>
                             <constraint firstItem="dg6-Cb-JIo" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="tF0-zF-rJ2"/>
                             <constraint firstItem="QIu-Dn-tn8" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="ts0-Dy-TQC"/>
                             <constraint firstItem="3lU-nN-POd" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="wQV-8C-HoF"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="G2Z-9C-Mv3" appends="YES" id="Lka-66-g5t"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="collegeTextField" destination="dg6-Cb-JIo" id="aBu-JM-Eue"/>
@@ -162,6 +170,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8j0-9F-ouo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="G2Z-9C-Mv3">
+                    <connections>
+                        <action selector="onTapScreen:" destination="kYs-Nv-Nlg" id="OIx-WB-ct3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1807" y="310"/>
         </scene>
