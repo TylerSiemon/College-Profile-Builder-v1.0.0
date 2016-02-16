@@ -18,17 +18,17 @@ class College: NSObject
     
     convenience init(name: String, state: String, population: Int, image: UIImage, webPage : String)
     {
-        self.init()
-        self.name = name
-        self.state = state
-        self.population = population
-        self.image = image
-        self.webPage = webPage
+        self.init();
+        self.name = name;
+        self.state = state;
+        self.population = population;
+        self.image = image;
+        self.webPage = webPage;
     }
     
     convenience init(name: String)
     {
-        self.init()
-        self.name = name
+        self.init();
+        self.name = name;
     }
 }

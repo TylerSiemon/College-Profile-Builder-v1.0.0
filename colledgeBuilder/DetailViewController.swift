@@ -70,16 +70,21 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
                 () -> Void in
                 let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage;
                 self.imageView.image = selectedImage;
-        }
+            }
     }
     
     @IBAction func onTapScreen(sender: UITapGestureRecognizer)
     {
+        
+        college.name = collegeTextField.text!;
+        college.state = stateTextField.text!;
+        college.population = Int(populationTextField.text!)!;
+        college.webPage = webPageTextField.text!;
+        college.image = imageView.image;
         collegeTextField.resignFirstResponder();
         stateTextField .resignFirstResponder();
         populationTextField.resignFirstResponder();
         webPageTextField.resignFirstResponder();
-        
     }
     
     

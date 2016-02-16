@@ -20,9 +20,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
         super.viewDidLoad();
         editButton.tag = 0;
-        colleges.append(College(name: "ITT", state: "Illinois", population: 46594, image: UIImage(named: "itt")!, webPage: "http://www.niu.edu/index.shtml"))
-        colleges.append(College(name: "NIU", state: "Illinois", population: 749473, image: UIImage(named: "niu")!, webPage: "http://www.niu.edu/index.shtml"))
-        colleges.append(College(name: "CLC", state: "Illinois", population: 74738738, image: UIImage(named: "clc")!, webPage: "http://www.niu.edu/index.shtml"))
+        colleges.append(College(name: "ITT", state: "Illinois", population: 46594, image: UIImage(named: "itt")!, webPage: "http://www.niu.edu/index.shtml"));
+        colleges.append(College(name: "NIU", state: "Illinois", population: 749473, image: UIImage(named: "niu")!, webPage: "http://www.niu.edu/index.shtml"));
+        colleges.append(College(name: "CLC", state: "Illinois", population: 74738738, image: UIImage(named: "clc")!, webPage: "http://www.niu.edu/index.shtml"));
     }
     
     override func viewWillAppear(animated: Bool)
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             {
                 (action) -> Void in
                 let collegeTextField = alert.textFields![0] as UITextField;
-                self.colleges.append(College(name: collegeTextField.text!))
+                self.colleges.append(College(name: collegeTextField.text!));
                 self.tableView.reloadData();
             }
         
@@ -80,27 +80,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
     {
-        return true
+        return true;
     }
     
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
     {
-        let college = colleges[sourceIndexPath.row]
-        colleges.removeAtIndex(sourceIndexPath.row)
-        colleges.insert(college, atIndex: destinationIndexPath.row)
+        let college = colleges[sourceIndexPath.row];
+        colleges.removeAtIndex(sourceIndexPath.row);
+        colleges.insert(college, atIndex: destinationIndexPath.row);
     }
     
     @IBAction func onTappedEdit(sender: UIBarButtonItem)
     {
         if sender.tag == 0
         {
-            tableView.editing = true
-            sender.tag = 1
+            tableView.editing = true;
+            sender.tag = 1;
         }
         else
         {
-            tableView.editing = false
-            sender.tag = 0
+            tableView.editing = false;
+            sender.tag = 0;
         }
     }
     
