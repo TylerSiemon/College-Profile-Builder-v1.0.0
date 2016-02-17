@@ -143,6 +143,15 @@
                                     <action selector="goToWebsiteButton:" destination="kYs-Nv-Nlg" eventType="touchUpInside" id="vai-tM-dIb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6J-oc-eK3">
+                                <rect key="frame" x="277" y="548" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Map"/>
+                                <connections>
+                                    <segue destination="LMv-32-Icm" kind="show" id="HMH-S3-2yN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -150,6 +159,7 @@
                         <constraints>
                             <constraint firstItem="nPs-Bs-l0y" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="78o-Vm-qCv"/>
                             <constraint firstItem="yGc-Gx-qtw" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="ANx-rh-w1k"/>
+                            <constraint firstItem="w6J-oc-eK3" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="Lml-C2-qoi"/>
                             <constraint firstItem="ky4-T1-CDA" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="V6D-b9-wub"/>
                             <constraint firstItem="823-hz-mDW" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="Xgw-yq-ynK"/>
                             <constraint firstItem="MA6-qd-ykZ" firstAttribute="centerX" secondItem="wfm-Kt-0YU" secondAttribute="centerX" id="h5R-E0-XH9"/>
@@ -177,6 +187,44 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1807" y="310"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="QpO-6E-3gp">
+            <objects>
+                <viewController id="LMv-32-Icm" customClass="MapVC" customModule="colledgeBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BRa-ve-1Cz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ngZ-EI-5pN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HCq-0v-9qg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eyQ-cD-rHf">
+                                <rect key="frame" x="0.0" y="87" width="600" height="513"/>
+                                <animations/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mCr-6J-Wlc">
+                                <rect key="frame" x="208" y="108" width="184" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mCr-6J-Wlc" firstAttribute="centerX" secondItem="HCq-0v-9qg" secondAttribute="centerX" id="ODe-Lb-OWl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="eyQ-cD-rHf" id="UML-bx-9as"/>
+                        <outlet property="textField" destination="mCr-6J-Wlc" id="rGS-9r-oJi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9vf-bP-fJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2504" y="310"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s5Q-wp-tYh">
