@@ -14,11 +14,14 @@ class MapVC: UIViewController,UITextFieldDelegate
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var textField: UITextField!
     
+    var college : College!;
+    var location = ""
+    
     override func viewDidLoad()
     {
         super.viewDidLoad();
         textField.delegate = self;
-        findLocation("Barrington, IL");
+        findLocation(location);
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -69,7 +72,7 @@ class MapVC: UIViewController,UITextFieldDelegate
     {
         textField.text = placemark.name;
         let center = placemark.location!.coordinate;
-        let span = MKCoordinateSpanMake(0.05, 0.05);
+        let span = MKCoordinateSpanMake(1, 1);
         let region = MKCoordinateRegionMake(center, span);
         let pin = MKPointAnnotation();
         pin.coordinate = center;

@@ -15,8 +15,9 @@ class College: NSObject
     var population = 0;
     var webPage = "";
     var image = UIImage(named: "Default");
+    var location = "";
     
-    convenience init(name: String, state: String, population: Int, image: UIImage, webPage : String)
+    convenience init(name: String, state: String, population: Int, image: UIImage, webPage : String, location: String)
     {
         self.init();
         self.name = name;
@@ -24,6 +25,7 @@ class College: NSObject
         self.population = population;
         self.image = image;
         self.webPage = webPage;
+        self.location = location;
     }
     
     convenience init(name: String)

@@ -87,5 +87,10 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UI
         webPageTextField.resignFirstResponder();
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dvc = segue.destinationViewController as! MapVC;
+        dvc.location = college.location
+    }
+    
     
 }
